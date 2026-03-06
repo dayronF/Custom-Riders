@@ -2,12 +2,11 @@ create database CustomRiders ;
 
 use CustomRiders;
 
-create table motorbike (
+create table motorbike(
 id int primary key auto_increment not null unique,
-bran varchar(100),
+brand varchar(100),
 model varchar(100), 
 cc varchar(100),
 price int,
 quantity int
-
 );
