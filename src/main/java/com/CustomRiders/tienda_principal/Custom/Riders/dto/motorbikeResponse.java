@@ -3,7 +3,8 @@ package com.CustomRiders.tienda_principal.Custom.Riders.dto;
 import lombok.Data;
 
 @Data
-public class motorbikeRequest {
+public class motorbikeResponse {
+    private String id;
     
     private String brand;
    
