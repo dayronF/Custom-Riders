@@ -44,7 +44,7 @@ public class motorbikeService {
         entity.setPrice(request.getPrice());
         entity.setQuantity(request.getQuantity());
 
-        motorbikeRepository.save dto = new motorbikeResponse();
+        motorbikeRepository.save(entity);
 
         motorbikeResponse dto = new motorbikeResponse();
         dto.setBrand(entity.getBrand());
@@ -77,6 +77,6 @@ public class motorbikeService {
         return responseList;
     }
 
-    //GET /motorbikes/by-brand en postman
+    // GET /motorbikes/by-brand en postman
 
 }

@@ -11,7 +11,7 @@ public class motorbikeRequest {
     
     private Integer cc;
    
-    private Integer price;
+    private Double price;
     
     private Integer quantity;
 }

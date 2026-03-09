@@ -8,23 +8,27 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+@Data
 @Entity
-    @Data
-    @Table(name = "motorbike")
-    public class motorbikeEntity {
-        @Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
- 
+@Table(name = "motorbike")
+public class motorbikeEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "brand")
     private String brand;
+
     @Column(name = "model")
     private String model;
+
     @Column(name = "cc")
     private Integer cc;
+
     @Column(name = "price")
-    private Integer price;
+    private Double price; // ✅ cambiado a Double
+
     @Column(name = "quantity")
     private Integer quantity;
-
-    }
+}
