@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 import com.CustomRiders.tienda_principal.Custom.Riders.dto.motorbikeRequest;
 import com.CustomRiders.tienda_principal.Custom.Riders.dto.motorbikeResponse;
-import com.CustomRiders.tienda_principal.Custom.Riders.entity.motorbikeEntity;
+
 import com.CustomRiders.tienda_principal.Custom.Riders.service.motorbikeService;
 
 import java.util.List;

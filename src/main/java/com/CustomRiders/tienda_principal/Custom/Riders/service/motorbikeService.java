@@ -1,10 +1,9 @@
+package com.CustomRiders.tienda_principal.Custom.Riders.service;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import com.CustomRiders.tienda_principal.Custom.Riders.dto.motorbikeRequest;
 import com.CustomRiders.tienda_principal.Custom.Riders.dto.motorbikeResponse;
@@ -44,14 +43,15 @@ public class motorbikeService {
         entity.setPrice(request.getPrice());
         entity.setQuantity(request.getQuantity());
 
-        motorbikeRepository.save dto = new motorbikeResponse();
+        motorbikeEntity saved = motorbikeRepository.save(entity);
 
         motorbikeResponse dto = new motorbikeResponse();
-        dto.setBrand(entity.getBrand());
-        dto.setModel(entity.getModel());
-        dto.setCc(entity.getCc());
-        dto.setPrice(entity.getPrice());
-        dto.setQuantity(entity.getQuantity());
+        dto.setId(saved.getId() != null ? Long.valueOf(saved.getId()) : null);
+        dto.setBrand(saved.getBrand());
+        dto.setModel(saved.getModel());
+        dto.setCc(saved.getCc());
+        dto.setPrice(saved.getPrice());
+        dto.setQuantity(saved.getQuantity());
 
         return dto;
     }
@@ -77,6 +77,6 @@ public class motorbikeService {
         return responseList;
     }
 
-    //GET /motorbikes/by-brand en postman
+    
 
 }

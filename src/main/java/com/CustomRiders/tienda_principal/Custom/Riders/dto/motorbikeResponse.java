@@ -4,7 +4,8 @@ import lombok.Data;
 
 @Data
 public class motorbikeResponse {
-    private String id;
+    
+    private long id;
     
     private String brand;
    
